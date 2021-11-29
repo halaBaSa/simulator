@@ -10,15 +10,15 @@ const b9= document.querySelector('#b9');
 const plus400 = document.querySelectorAll('.plus4');
 const minus400 = document.querySelectorAll('.minus4');
 const totaleCost = document.querySelector('.estimate-price')
-let estiamtion = 1000;
+let estiamtion = 0;
 
-console.log(b1);
-
+/*
 b1.addEventListener('click', () => { 
     let estiamtion = 1000;
     estiamtion += 1500;
     totaleCost.innerText = estiamtion
 });
+
 b2.addEventListener('click', () => { 
     let estiamtion = 1000;
     estiamtion += 1400;
@@ -58,13 +58,16 @@ b9.addEventListener('click', () => {
     totaleCost.innerText = estiamtion
 });
 
+*/
 
-plus400.addEventListener('click', () => { 
-    estiamtion += 400;
-    totaleCost.innerText = estiamtion
-});
-minus400.addEventListener('click', () => { 
-    estiamtion -= 400;
-    totaleCost.innerText = estiamtion
-});
 
+
+var OnClickEventFn = function (Element,PriceAction) {
+    Element.addEventListener('click', () => { 
+        estiamtion += PriceAction;
+        totaleCost.innerText = estiamtion;
+    });
+}
+for (i=0,i<100,i++) {
+    
+}

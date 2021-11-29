@@ -1,0 +1,10 @@
+{
+    "ServicePage":{
+        "price":500, 
+        "Name":"Page"
+    },
+    "ServiceSecurity":{
+        "price":1500, 
+        "Name":"Security"
+    }
+}
