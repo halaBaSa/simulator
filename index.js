@@ -3,6 +3,8 @@ const b2 = document.querySelector('#b2');
 const b3 = document.querySelector('#b3');
 const b4 = document.querySelector('#b4');
 const b5 = document.querySelector('#b5');
+const b5value = document.getElementById("b5").getElementsByClassName("valeur")[0];
+const b5v = document.querySelector("#b5input").value;
 const b6 = document.querySelector('#b6');
 const b7 = document.querySelector('#b7');
 const b8 = document.querySelector('#b8');
@@ -10,7 +12,7 @@ const b9= document.querySelector('#b9');
 const plus400 = document.querySelectorAll('.plus4');
 const minus400 = document.querySelectorAll('.minus4');
 const totaleCost = document.querySelector('.estimate-price')
-let estiamtion = 0;
+let estimation = 0;
 
 /*
 b1.addEventListener('click', () => { 
@@ -64,10 +66,8 @@ b9.addEventListener('click', () => {
 
 var OnClickEventFn = function (Element,PriceAction) {
     Element.addEventListener('click', () => { 
-        estiamtion += PriceAction;
-        totaleCost.innerText = estiamtion;
+        estimation = estimation + parseInt(PriceAction,10);
+        totaleCost.innerText = estimation;
     });
 }
-for (i=0,i<100,i++) {
-    
-}
+OnClickEventFn(b5,b5v);
