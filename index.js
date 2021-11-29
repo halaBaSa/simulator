@@ -8,10 +8,11 @@ const b5v = document.querySelector("#b5input").value;
 const b6 = document.querySelector('#b6');
 const b7 = document.querySelector('#b7');
 const b8 = document.querySelector('#b8');
-const b9= document.querySelector('#b9');
+const b9 = document.querySelector('#b9');
 const plus400 = document.querySelectorAll('.plus4');
 const minus400 = document.querySelectorAll('.minus4');
 const totaleCost = document.querySelector('.estimate-price')
+const plus = document.querySelector(".plus");
 let estimation = 0;
 
 /*
@@ -64,10 +65,44 @@ b9.addEventListener('click', () => {
 
 
 
-var OnClickEventFn = function (Element,PriceAction) {
-    Element.addEventListener('click', () => { 
-        estimation = estimation + parseInt(PriceAction,10);
+var OnClickEventFn = function(Element, PriceAction) {
+        Element.addEventListener('click', () => {
+            estimation = estimation + parseInt(PriceAction, 10);
+            totaleCost.innerText = estimation;
+        });
+    }
+    //OnClickEventFn(b5, b5v);
+
+var OnClickEventS = function(Element, PriceAction) {
+    Element.addEventListener('click', () => {
+        estimation = estimation + parseInt(PriceAction, 10);
         totaleCost.innerText = estimation;
     });
 }
-OnClickEventFn(b5,b5v);
+
+var startSum = function() {
+    let onServices = document.getElementsByClassName("on");
+    console.log(onServices);
+
+    for (i = 0; i <= onServices.length; i++) {
+        /*var price = onServices[i].querySelector(".valeur");
+        estimation = estimation + parseInt(price, 10);
+        totaleCost.innerText = estimation;
+        console.log(estimation, price);*/
+
+    }
+}
+
+plus.addEventListener('click', () => {
+    event.preventDefault();
+    var parentTarget = event.target;
+    var parent = parentTarget.parentElement;
+    parent.classList.remove("off");
+    parent.classList.add("on");
+
+
+
+
+});
+
+startSum();
