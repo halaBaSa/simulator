@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Custome pricing page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -15,15 +16,49 @@
         <div class="col-6 m-2">
             <div class="m-3 p-3 border border-2">
                 <h1>List of services</h1>
-                <div class="service off" id="b5">
-                    <span>Service 1</span>
-                    <input hidden id="b5input" class="hidden valeur" name="b5value" value="500">
-                    <a class="plus" href=""><img src="https://img.icons8.com/ios/50/000000/plus.png" /></a>
+                <div class="service off">
+                    <div class="prix">
+                        <span>Service 1</span>
+                        <p>500 <span>DH</span></p>
+                    </div>
+                    <div class="number">
+                        <span class="minus">-</span>
+                        <input name="quantite" type="text" value="0" />
+                        <span class="plus">+</span>
+                    </div>
                 </div>
-                <div class="service off" id="s2">
-                    <span>Service 2</span>
-                    <input hidden id="s2input" class="hidden valeur" name="s2value" value="1000">
-                    <a class="plus" href=""><img src="https://img.icons8.com/ios/50/000000/plus.png" /></a>
+                <div class="service off">
+                    <div class="prix">
+                        <span>Service 2</span>
+                        <p>1000 <span>DH</span></p>
+                    </div>
+                    <button id="s2"><img src="https://img.icons8.com/ios/50/000000/plus.png" /></button>
+                </div>
+                <div class="service off">
+                    <div class="prix">
+                        <span>Service 3</span>
+                        <p>1500 <span>DH</span></p>
+                    </div>
+                    <button id="s3"><img src="https://img.icons8.com/ios/50/000000/plus.png" /></button>
+                </div>
+                <div class="service off" id="s4">
+                    <div class="prix">
+                        <span>Service 4</span>
+                        <p>2000 <span>DH</span></p>
+                    </div>
+                    <button id="s4"><img src="https://img.icons8.com/ios/50/000000/plus.png" /></button> </div>
+                <div class="service off">
+                    <div class="prix">
+                        <span>Service 5</span>
+                        <p>2500 <span>DH</span></p>
+                    </div>
+                    <button id="s5"><img src="https://img.icons8.com/ios/50/000000/plus.png" /></button> </div>
+                <div class="service off">
+                    <div class="prix">
+                        <span>Service 6</span>
+                        <p>3000 <span>DH</span></p>
+                    </div>
+                    <button id="s6"><img src="https://img.icons8.com/ios/50/000000/plus.png" /></button>
                 </div>
 
             </div>
